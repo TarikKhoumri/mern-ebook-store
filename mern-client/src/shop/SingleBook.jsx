@@ -12,7 +12,7 @@ export const SingleBook = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/book/${id}`)
+    fetch(`http://localhost:5000/api/books/book/${id}`)
       .then(res => {
         if (!res.ok) {
           console.log(res)
@@ -33,7 +33,7 @@ export const SingleBook = () => {
   const handleBuyNow = async (price, bookTitle) => {
     const stripe = await stripePromise;
 
-    const response = await fetch('http://localhost:5000/create-checkout-session', {
+    const response = await fetch('http://localhost:5000/api/payments/create-checkout-session', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

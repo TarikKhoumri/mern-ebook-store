@@ -10,7 +10,7 @@ const Dashboard = () => {
   const lineChartRef = useRef(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("http://localhost:5000/api/payments/orders")
       .then(response => response.json())
       .then(data => {
         setOrders(data);

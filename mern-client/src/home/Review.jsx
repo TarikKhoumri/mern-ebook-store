@@ -22,7 +22,7 @@ const Review = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch("http://localhost:5000/all-reviews");
+        const response = await fetch("http://localhost:5000/api/reviews/all-reviews");
         const data = await response.json();
         setReviews(data);
       } catch (error) {

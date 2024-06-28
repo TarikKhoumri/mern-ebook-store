@@ -149,7 +149,7 @@ const UploadBooks = () => {
       bookTitle, authorName, imageURL, category, bookDescription, bookPDFURL, bookUploader, price
     }
     // send data to db
-    fetch("http://localhost:5000/upload-book", {
+    fetch("http://localhost:5000/api/books/upload-book", {
       method:"POST",
       headers:{
         "Content-type" : "application/json",

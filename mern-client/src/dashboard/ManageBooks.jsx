@@ -8,12 +8,12 @@ const ManageBooks = () => {
   console.log(user);
   const [allBooksData, setAllBooksData] = useState([]);
   useEffect(()=> {
-    fetch("http://localhost:5000/all-books").then(res => res.json()).then(data => setAllBooksData(data));
+    fetch("http://localhost:5000/api/books/all-books").then(res => res.json()).then(data => setAllBooksData(data));
   }, [])
   
   const handleDelete = (bookId) => {
     console.log(bookId)
-    fetch(`http://localhost:5000/book/${bookId}`,{
+    fetch(`http://localhost:5000/api/books/book/${bookId}`,{
       method:"DELETE"
     }).then(res => res.json()).then(data =>{ 
       alert("Book is deleted successfully!");

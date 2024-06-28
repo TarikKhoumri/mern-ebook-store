@@ -22,7 +22,7 @@ const ReviewForm = ({ onClose, onAddReview }) => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const response = await axios.post('http://localhost:5000/create-review', review);
+      const response = await axios.post('http://localhost:5000/api/payments/create-review', review);
       onAddReview(response.data);
       setSuccessMessage('Review added successfully!');
       setTimeout(() => {

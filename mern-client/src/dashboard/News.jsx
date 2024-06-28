@@ -16,7 +16,7 @@ const News = () => {
           title, body, datePuc
         }
         // send data to db
-        fetch("http://localhost:5000/add-post", {
+        fetch("http://localhost:5000/api/posts/add-post", {
           method:"POST",
           headers:{
             "Content-type" : "application/json",

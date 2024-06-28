@@ -169,7 +169,7 @@ const EditBooks = () => {
       price
     };
     // update data
-    fetch(`http://localhost:5000/book/${id}`, {
+    fetch(`http://localhost:5000/api/books/book/${id}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",
